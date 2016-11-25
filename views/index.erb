@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="javascript/bbs.js"></script>
     <title>4Jちゃんねる</title>
   </head>
   <body>
-    <h1>【水銀事件】長野高専スレpart12 [無断転載禁止]©4Jch.net </h1>
+    <h1>長野高専スレpart12 [無断転載禁止]©4Jch.net </h1>
 
     <hr>
 
@@ -24,7 +25,7 @@
 
     <hr>
 
-    <form method="post">
+    <form method="post" name="inputText" onsubmit="return checkTextLength()">
       <input type="submit" value="書き込む">
       名前 : <input type="text" name="name"><br>
       <input type="text" name="message" class="textbox" required>

@@ -22,6 +22,7 @@ form {
 .msg {
   padding-left: 3em;
   margin: 0;
+  word-wrap: break-word;
 }
 
 .textbox {

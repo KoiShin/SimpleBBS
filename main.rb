@@ -23,8 +23,8 @@ def get_wday_str(wday)
 end
 
 get '/' do
-    @posts = Post.all
-    erb :index
+  @posts = Post.all
+  erb :index
 end
 
 post '/' do
@@ -41,4 +41,3 @@ delete '/' do
   s.destroy
   redirect '/'
 end
-
