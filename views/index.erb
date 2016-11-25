@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>4Jちゃんねる</title>
+  </head>
+  <body>
+    <h1>【水銀事件】長野高専スレpart12 [無断転載禁止]©4Jch.net </h1>
+
+    <hr>
+
+    <% @posts.each do |post| %>
+      <div id="<%= post.id %>">
+        <%= post.id %> <span class="user-name"><%= (post.name&.empty?) ? "名無しさん" : post.name %></span> : <%= post.posted_at %> ID:<%= post.id_str %>
+        <form method="post">
+          <input type="submit" value="削除する">
+          <input type="hidden" name="id" value="<%= post.id %>">
+          <input type="hidden" name="_method" value="delete">
+        </form>
+        <p class="msg"><%= post.message.gsub(/&gt;&gt;(\d+)/, '<a href="#\1">&gt;&gt;\1</a>') %></p>
+      </div>
+    <% end %>
+
+    <hr>
+
+    <form method="post">
+      <input type="submit" value="書き込む">
+      名前 : <input type="text" name="name"><br>
+      <input type="text" name="message" class="textbox" required>
+    </form>
+  </body>
+</html>

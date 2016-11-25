@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(239, 239, 239);
+}
+
+h1 {
+  color: red;
+  font-size: larger;
+  font-weight: normal;
+  margin-right: 185px;
+  word-wrap: break-word;
+}
+
+form {
+  display: inline;
+}
+
+.user-name {
+  color: green;
+  font-weight: bold;
+}
+
+.msg {
+  padding-left: 3em;
+  margin: 0;
+}
+
+.textbox {
+  margin: 1em;
+  margin-left: 4em;
+  width: 30em;
+  height: 7em;
+}
